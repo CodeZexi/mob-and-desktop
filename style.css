@@ -1,0 +1,77 @@
+.parent{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 600px;
+    width: 600px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.one, .two, .three, .four, .five, .six,
+.seven, .eight, .nine, .ten
+{
+    background-color: rgb(172, 43, 43);
+}
+
+.one{
+    grid-column: 7 / span 1;
+    width: 40px;
+    margin-left: 40px;
+    background-image: url("BrickSmallBrown2.jpg");
+}
+
+.two{
+    grid-column: span 7;
+    background-image: url("BrickSmallBrown.jpg");
+}
+
+.three{
+    grid-column: span 2;
+    grid-row: 7;
+}
+
+.four{
+    grid-row: 7;
+}
+
+.five{
+    grid-row: 7;
+}
+
+.six{
+    grid-row: 7;
+}
+
+.seven{
+    grid-column: span 2;
+    grid-row: 7;
+}
+
+.eight{
+    grid-column: span 1;
+    grid-row: 3 / span 1;
+    background-image: url("BrickSmallBrown.jpg");
+}
+
+.nine{
+    grid-column: span 4;
+    grid-row: 3 / span 4;
+    background-image: url("BrickSmallBrown.jpg");
+}
+
+.emt1{
+    padding: 50px 0 50px 0;
+    grid-column: span 1;
+    grid-row: 4 / span 3;
+    background-position:center;
+    background-size: 155px 300px;
+    background-image: url("Capture.PNG");
+}
+
+.ten{
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 4;
+    background-image: url("BrickSmallBrown.jpg");
+}
+
