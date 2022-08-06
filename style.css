@@ -1,77 +1,141 @@
+
+:root{
+  --bkcolor: #56727C;
+  --mcolor: white;
+  --cursorC: #D9E9EF;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
 .parent{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    height: 600px;
-    width: 600px;
-    background-color: #eee;
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "logo logo nav nav nav nav nav nav . ." 
+                       "msec msec msec msec msec msec msec msec msec msec"
+                       "footer footer footer footer footer footer footer footer footer footer";
+  background-color: var(--bkcolor);
 }
 
-.one, .two, .three, .four, .five, .six,
-.seven, .eight, .nine, .ten
-{
-    background-color: rgb(172, 43, 43);
+.parent nav{
+  background-color: var(--bkcolor);
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-weight: bold;
+  padding: 20px;
+  direction: rtl;
+
 }
 
-.one{
-    grid-column: 7 / span 1;
-    width: 40px;
-    margin-left: 40px;
-    background-image: url("BrickSmallBrown2.jpg");
+.logo{
+  grid-area: logo;
+  background-color: var(--bkcolor);
+  display: inline-flex;
+  justify-self: flex-end;
+  align-self: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: var(--mcolor);
+  font-size: 2vw;
 }
 
-.two{
-    grid-column: span 7;
-    background-image: url("BrickSmallBrown.jpg");
+.logo img:hover{
+  transform: scale(1.1);
+  transform-origin: center center;
+  filter:brightness(1.1), contrast(1.1);
+  transition-timing-function: ease-in-out;
+  transition-duration: 400ms;
 }
 
-.three{
-    grid-column: span 2;
-    grid-row: 7;
+.parent li{
+  display: inline-flex;
+  list-style: none;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  margin-left: 20px;
+  color: var(--mcolor);
 }
 
-.four{
-    grid-row: 7;
+.parent a{
+  text-decoration: none;
+  color: white;
 }
 
-.five{
-    grid-row: 7;
+.parent a:hover{
+  color: rgba(0, 97, 187, 0.803);
+  transform-origin: 0;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
 }
 
-.six{
-    grid-row: 7;
+.main{
+  grid-area: msec;
+  background-color: rgb(0, 170, 255);
+  min-height: 100vh;
 }
 
-.seven{
-    grid-column: span 2;
-    grid-row: 7;
+footer{
+  grid-area: footer;
+  color: var(--mcolor);
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 2vw;
+  display: flex;
+  justify-self: center;
 }
 
-.eight{
-    grid-column: span 1;
-    grid-row: 3 / span 1;
-    background-image: url("BrickSmallBrown.jpg");
+.gallary{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%;
+  justify-content: center;
+
 }
 
-.nine{
-    grid-column: span 4;
-    grid-row: 3 / span 4;
-    background-image: url("BrickSmallBrown.jpg");
+.posters{
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 450px;
 }
 
-.emt1{
-    padding: 50px 0 50px 0;
-    grid-column: span 1;
-    grid-row: 4 / span 3;
-    background-position:center;
-    background-size: 155px 300px;
-    background-image: url("Capture.PNG");
+.posters:hover{
+  transform: scale(1.02);
+  transform-origin: top center;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
 }
 
-.ten{
-    grid-column: 1 / span 3;
-    grid-row: 3 / span 4;
-    background-image: url("BrickSmallBrown.jpg");
+.main span{
+  color: white;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
+.main span:hover{
+  color: var(--bkcolor);
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.gallary:hover a span{
+  font-size: 1.9vh;
+  transition-timing-function: ease-in-out;
+  transition-duration: 490ms;
+}
+
+.mainpagetext{
+  display: flex;
+  color: azure;
+  justify-content: center;
+  font-size: 2vw;
+}
